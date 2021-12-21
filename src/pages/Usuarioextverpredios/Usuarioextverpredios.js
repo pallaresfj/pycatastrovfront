@@ -61,12 +61,25 @@ const Usuarioextverpredios = () => {
     ];
   
     return (
-      <div>
-        <h3>Lista de mis predios</h3>
-        <Link to="/crear_usuario">Crear Usuario</Link>
-        <Tabla columnas={columnas} registros={usuarios} campos={campos_predio} bus={obtener_prediosa} botones={false}/>
-     </div>
-    
+      <>
+      <div className="container w-75 my-5">
+        <h1 className="fw-bold text-start text-primary py-2">
+        Lista de mis predios
+        </h1>
+        <div className="d-flex justify-content-end">
+          <input type="text" className="form-control" float="left" id="Buscar" width="50" placeholder="Buscar..." />
+          <Link className="btn btn-light" to="/asociarprediose">
+            <img src="/img/add-ico.png" alt="" width="50" height="50"
+              className="d-inline-block align-text-middle" />
+          </Link>
+        </div>
+      </div>
+      <div className="container w-75 mb-5 border-1 rounded shadow">
+
+      <Tabla columnas={columnas} registros={usuarios} campos={campos_predio} bus={obtener_prediosa} botones={false}/>
+
+      </div>
+    </>
     );
 };
 

@@ -6,23 +6,12 @@ const GestionPredio = () => {
 
     const datos_predio = (datos) => {
         console.log(datos)
-
-
-    }    
-
-
-    return(
+    }
+    return (
 
         <div>
-
-            <h3>Cambiar dueño predio</h3>
-            <FormGestionPredio bus={datos_predio}/>
-
-
-
-
+            <FormGestionPredio bus={datos_predio} />
         </div>
-
-    )}
-
+    )
+}
 export default GestionPredio

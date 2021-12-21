@@ -20,23 +20,13 @@ const AsociarPredioe = () => {
               
               
                 window.location.href = "/mispredios";
-            });    
-
+            }
+            );    
     }    
-
-
     return(
-
         <div>
-
-            <h3>Asociar predio a mi cuenta</h3>
             <FormAsociarPredioExt bus={datos_predio}/>
-
-
-
-
         </div>
-
-    )}
-
+    )
+}
 export default AsociarPredioe

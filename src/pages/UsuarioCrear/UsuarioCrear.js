@@ -3,12 +3,12 @@ import FormRegUser from "../../components/FormRegUser/FormRegUser.js"
 
 const UsuarioCrear = () => {
 
-    const datos_usuario = (usuario) => {
-        
-      fetch("http://localhost:8000/api/crearusuario", {
+  const datos_usuario = (usuario) => {
+
+    fetch("http://localhost:8000/api/crearusuario", {
       method: "POST",
       body: JSON.stringify(usuario),
-        headers: {
+      headers: {
         "Content-Type": "application/json",
       },
     })
@@ -17,23 +17,11 @@ const UsuarioCrear = () => {
       .then((response) => {
         //window.location.href = "/usuario";
       });
-
-
-        }
-
-
-   return(
-
-<div>
-
-    <h3>Creación de usuario</h3>
-    <FormRegUser  bus={datos_usuario} />
-
-
+  }
+  return (
+    <div>
+      <FormRegUser bus={datos_usuario} />
     </div>
-
-
-
-)}
-
+  )
+}
 export default UsuarioCrear

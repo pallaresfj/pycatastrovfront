@@ -1,33 +1,14 @@
-import { Link } from "react-router-dom";
+import Cabecera from '../../../components/Cabecera'
+import Servicios from '../../../components/Servicios/Servicios'
+import Contacto from '../../../components/Contacto'
 
 const Dashusuinterno = () =>{
-
     return (
         <div>
-            
-            <div>
-                <Link to='/crearpredio'>Crear Predio</Link>
-            </div>
-
-            <div>
-                <Link to='/gestionpredio'>Modificar dueño predio</Link>
-            </div>
-
-            <div>
-                <Link to='/definirpagomax'>Definir fecha pago máximo</Link>
-            </div>
-
-            <div>
-                <Link to='/definirpagomaxdesc'>Definir fecha pago máximo con descuento</Link>
-            </div>
-
-
-           
-           
+            <Cabecera />
+            <Servicios />
+            <Contacto />
         </div>
     )
-
-    
 }
-
 export default Dashusuinterno
