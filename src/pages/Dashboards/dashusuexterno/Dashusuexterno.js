@@ -1,29 +1,14 @@
-import { Link } from "react-router-dom";
+import Cabecera from '../../../components/Cabecera'
+import Servicios from '../../../components/Servicios/Servicios'
+import Contacto from '../../../components/Contacto'
 
 const Dashusuexterno = () =>{
-
     return (
         <div>
-            
-            <div>
-                <Link to='/asociarprediose'>Asociar predio a usuario</Link>
-            </div>
-
-            <div>
-                <Link to='/mispredios'>Ver mis predios</Link>
-            </div>
-
-            <div>
-                <Link to='/mispagos'>Pagar saldos pendientes</Link>
-            </div>
-
-
-           
-           
+            <Cabecera />
+            <Servicios />
+            <Contacto />
         </div>
     )
-
-    
 }
-
 export default Dashusuexterno

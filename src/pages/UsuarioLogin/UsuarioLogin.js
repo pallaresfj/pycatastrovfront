@@ -19,9 +19,10 @@ const UsuarioLogin = ({bus}) => {
                 alert('correo o contraseña invalida')
                 }
                 else{
-                    window.sessionStorage.setItem("nivelacceso", JSON.stringify(response.nivelacceso)) //guarda el nivel de acceso del usuario en el localstorage
+                    window.sessionStorage.setItem("nivelacceso", JSON.stringify(response.nivelacceso))
                     window.sessionStorage.setItem("cedula", JSON.stringify(response.cedula))
-
+                    window.sessionStorage.setItem("nombre", JSON.stringify(response.nombre))
+                    window.sessionStorage.setItem("correo", JSON.stringify(response.correo))
                     if (response.nivelacceso === 1){
                         window.location.href = "/dashadmin";
 
@@ -46,17 +47,9 @@ const UsuarioLogin = ({bus}) => {
 
 
     return(
-
         <div>
-
-            <h3>Página de login</h3>
             <FormLogin bus={datosLogin}/>
-
-
-
-
         </div>
-
     )}
 
 export default UsuarioLogin
